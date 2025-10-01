@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "44871186403",
+    "firebase_url": "https://fish-69805-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fish-69805",
+    "storage_bucket": "fish-69805.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44871186403:android:dcb1bd8e166dd9aec392d6",
+        "android_client_info": {
+          "package_name": "com.example.fishsecure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSHva8xrsjL9-a-ABvegTLL-tNF_B6yAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
