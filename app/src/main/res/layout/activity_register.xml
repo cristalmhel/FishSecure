@@ -51,6 +51,15 @@
             android:inputType="textPersonName" />
 
         <EditText
+            android:id="@+id/etMiddleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Middle Name"
+            android:textStyle="bold"
+            android:inputType="textPersonName" />
+
+        <EditText
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

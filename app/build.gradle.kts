@@ -52,7 +52,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-database")

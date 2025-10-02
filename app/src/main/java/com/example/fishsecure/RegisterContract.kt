@@ -10,6 +10,7 @@ interface RegisterContract {
         fun registerUser(
             firstName: String,
             lastName: String,
+            middleName: String,
             username: String,
             email: String,
             password: String,
