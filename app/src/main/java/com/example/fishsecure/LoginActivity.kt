@@ -10,10 +10,6 @@ import android.widget.Toast
 
 class LoginActivity : Activity(), LoginView {
     private lateinit var presenter: LoginPresenter
-    private lateinit var usernameEditText: EditText
-    private lateinit var passwordEditText: EditText
-
-    private var firstNameFromRegister: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,12 +35,6 @@ class LoginActivity : Activity(), LoginView {
             startActivity(intent)
         }
 
-        val emailFromRegister = intent.getStringExtra("EMAIL")
-        firstNameFromRegister = intent.getStringExtra("FIRST_NAME")
-
-        emailFromRegister?.let {
-            usernameEditText.setText(it)
-        }
 
         loginButton.setOnClickListener {
             val username = usernameEditText.text.toString()
@@ -57,7 +47,6 @@ class LoginActivity : Activity(), LoginView {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
         val intent = Intent(this, HomeActivity::class.java)
-        intent.putExtra("FIRST_NAME", firstNameFromRegister)
         startActivity(intent)
         finish()
     }

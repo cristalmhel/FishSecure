@@ -60,8 +60,8 @@ class HomeActivity : Activity(), HomeContract.View {
             }
         }
 
-
-        val firstName = intent.getStringExtra("FIRST_NAME")
+        val user = UserManager.currentUser
+        val firstName = user?.firstName
         greetingText.text = if (!firstName.isNullOrEmpty()) {
             "Good Day, $firstName!"
         } else {
