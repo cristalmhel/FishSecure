@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.fishsecure.contract.RegisterContract
+import com.example.fishsecure.presenter.RegisterPresenter
 
 class RegisterActivity : Activity(), RegisterContract.View {
 

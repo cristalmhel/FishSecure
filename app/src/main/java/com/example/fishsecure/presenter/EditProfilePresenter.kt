@@ -1,4 +1,6 @@
-package com.example.fishsecure
+package com.example.fishsecure.presenter
+
+import com.example.fishsecure.contract.EditProfileContract
 
 class EditProfilePresenter(private val view: EditProfileContract.View) : EditProfileContract.Presenter {
 

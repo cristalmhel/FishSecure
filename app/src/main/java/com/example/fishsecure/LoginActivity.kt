@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.fishsecure.presenter.LoginPresenter
+import com.example.fishsecure.view.LoginView
 
 class LoginActivity : Activity(), LoginView {
     private lateinit var presenter: LoginPresenter

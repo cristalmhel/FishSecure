@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.example.fishsecure.contract.ParametersContract
+import com.example.fishsecure.presenter.ParametersPresenter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ParametersActivity : Activity(), ParametersContract.View {

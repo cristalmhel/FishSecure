@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import com.example.fishsecure.contract.NotificationContract
+import com.example.fishsecure.presenter.NotificationPresenter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NotificationActivity : Activity(), NotificationContract.View {

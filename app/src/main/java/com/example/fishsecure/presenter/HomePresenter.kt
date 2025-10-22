@@ -1,5 +1,6 @@
-package com.example.fishsecure
+package com.example.fishsecure.presenter
 
+import com.example.fishsecure.contract.HomeContract
 import com.example.fishsecure.model.Aquarium
 
 class HomePresenter(private val view: HomeContract.View) : HomeContract.Presenter {

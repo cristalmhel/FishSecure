@@ -1,6 +1,8 @@
-package com.example.fishsecure
+package com.example.fishsecure.presenter
 
+import com.example.fishsecure.UserManager
 import com.example.fishsecure.model.User
+import com.example.fishsecure.view.LoginView
 import com.google.firebase.Firebase
 import com.google.firebase.database.database
 

@@ -1,6 +1,7 @@
-package com.example.fishsecure
+package com.example.fishsecure.presenter
 
-import com.example.fishsecure.NotificationModel
+import com.example.fishsecure.contract.NotificationContract
+import com.example.fishsecure.model.NotificationModel
 
 class NotificationPresenter(private val view: NotificationContract.View) : NotificationContract.Presenter {
 

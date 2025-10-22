@@ -1,4 +1,4 @@
-package com.example.fishsecure.settings
+package com.example.fishsecure.contract
 
 interface SettingsContract {
     interface View {
