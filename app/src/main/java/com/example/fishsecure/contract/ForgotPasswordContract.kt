@@ -1,4 +1,4 @@
-package com.example.fishsecure
+package com.example.fishsecure.contract
 
 interface ForgotPasswordContract {
     interface View {

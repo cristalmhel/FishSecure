@@ -1,4 +1,6 @@
-package com.example.fishsecure
+package com.example.fishsecure.presenter
+
+import com.example.fishsecure.contract.LogoutContract
 
 class LogoutPresenter(
     private val view: LogoutContract.View

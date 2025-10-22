@@ -9,6 +9,6 @@ interface ResetPasswordContract {
     }
 
     interface Presenter {
-        fun resetPassword(newPassword: String, confirmPassword: String)
+        fun resetPassword(newPassword: String, confirmPassword: String, email: String)
     }
 }

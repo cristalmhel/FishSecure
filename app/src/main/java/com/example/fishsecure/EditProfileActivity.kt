@@ -7,6 +7,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fishsecure.contract.EditProfileContract
+import com.example.fishsecure.presenter.EditProfilePresenter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {

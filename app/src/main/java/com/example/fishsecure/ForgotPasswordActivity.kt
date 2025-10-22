@@ -4,9 +4,13 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.*
-import com.example.fishsecure.ForgotPasswordContract
-import com.example.fishsecure.ForgotPasswordPresenter
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.TextView
+import android.widget.Toast
+import com.example.fishsecure.contract.ForgotPasswordContract
+import com.example.fishsecure.presenter.ForgotPasswordPresenter
 
 class ForgotPasswordActivity : Activity(), ForgotPasswordContract.View {
 

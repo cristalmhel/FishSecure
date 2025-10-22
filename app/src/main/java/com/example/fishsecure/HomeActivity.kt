@@ -8,7 +8,8 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fishsecure.home.AquariumAdapter
+import com.example.fishsecure.contract.HomeContract
+import com.example.fishsecure.presenter.HomePresenter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.SimpleDateFormat
 import java.util.Date

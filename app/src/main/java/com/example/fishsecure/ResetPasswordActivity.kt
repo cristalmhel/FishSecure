@@ -4,7 +4,11 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.TextView
+import android.widget.Toast
 import com.example.fishsecure.contract.ResetPasswordContract
 import com.example.fishsecure.presenter.ResetPasswordPresenter
 
@@ -43,7 +47,8 @@ class ResetPasswordActivity : Activity(), ResetPasswordContract.View {
         resetPasswordButton.setOnClickListener {
             presenter.resetPassword(
                 newPasswordInput.text.toString().trim(),
-                confirmPasswordInput.text.toString().trim()
+                confirmPasswordInput.text.toString().trim(),
+                userEmail.toString()
             )
         }
 

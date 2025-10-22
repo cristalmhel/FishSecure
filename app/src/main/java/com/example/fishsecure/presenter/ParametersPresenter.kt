@@ -1,4 +1,6 @@
-package com.example.fishsecure
+package com.example.fishsecure.presenter
+
+import com.example.fishsecure.contract.ParametersContract
 
 class ParametersPresenter(private val view: ParametersContract.View) : ParametersContract.Presenter {
 
