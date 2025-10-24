@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+    <!-- Data -->
+    <TextView
+        android:id="@+id/dataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aquarium data here"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <!-- Error State -->
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="visible">   <!-- change from gone -->
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/emptydata"
+            android:contentDescription="No Data"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO DATA"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/errorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unable to load aquarium data."
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#1A18B2"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="RETRY"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>
