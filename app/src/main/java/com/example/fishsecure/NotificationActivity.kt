@@ -35,6 +35,7 @@ class NotificationActivity : Activity(), NotificationContract.View {
 
     private fun setupClickListeners() {
         btnBack.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }
 
@@ -45,8 +46,8 @@ class NotificationActivity : Activity(), NotificationContract.View {
                     finish()
                     true
                 }
-                R.id.nav_parameters -> {
-                    startActivity(Intent(this, ParametersActivity::class.java))
+                R.id.nav_aquarium -> {
+                    startActivity(Intent(this, AquariumActivity::class.java))
                     finish()
                     true
                 }

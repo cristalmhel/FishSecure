@@ -2,7 +2,7 @@
     android:shape="rectangle">
 
     <!-- Background color -->
-    <solid android:color="@color/gray_500" />
+    <solid android:color="@color/dark_purple" />
 
     <!-- Border -->
     <stroke

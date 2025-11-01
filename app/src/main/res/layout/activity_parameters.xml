@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F7F7">
+    android:background="@color/white">
     <!-- Scrollable content -->
     <ScrollView
         android:id="@+id/scrollView"
@@ -17,40 +17,54 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <ImageView
-                android:id="@+id/backButton"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_margin="16dp"
-                android:src="@drawable/back"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackgroundBorderless" />
-
             <!-- Logo + Title -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:paddingBottom="10dp">
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:elevation="2dp">
 
+                <!-- Back Arrow -->
                 <ImageView
-                    android:id="@+id/logoImage"
-                    android:layout_width="200dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/logohm"
-                    android:contentDescription="Logo"
-                    android:scaleType="fitCenter" />
+                    android:id="@+id/btnBack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/backbutton"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:contentDescription="Back"
+                    app:tint="@color/black" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- Logo and Title -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="PARAMETERS"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:layout_marginTop="4dp"/>
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="16dp">
+
+                    <ImageView
+                        android:layout_width="240dp"
+                        android:layout_height="82dp"
+                        android:src="@drawable/logohm"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PARAMETERS"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Divider -->
@@ -82,6 +96,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="12dp">
 
@@ -90,9 +105,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardBackgroundColor="@color/dark_purple"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="2dp"
-                        android:background="@drawable/card_background">
+                        app:cardElevation="2dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -105,7 +121,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:contentDescription="Temperature Icon"
-                                android:src="@drawable/temp"/>
+                                android:src="@drawable/temp" />
 
                             <LinearLayout
                                 android:layout_width="0dp"
@@ -118,8 +134,8 @@
                                     android:id="@+id/tempLabel"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Temperature:"
-                                    android:textColor="#000000"
+                                    android:text="Temperature (°C)"
+                                    android:textColor="@color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -128,7 +144,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Normal range: 24°C - 28°C"
-                                    android:textColor="#999999"
+                                    android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
 
@@ -137,20 +153,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="27°C"
-                                android:textColor="#3F1C91"
+                                android:textColor="@color/light_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- pH Card -->
+                    <!-- TDS Card -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardBackgroundColor="@color/dark_purple"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="2dp"
-                        android:background="@drawable/card_background">
+                        app:cardElevation="2dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -163,7 +180,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:contentDescription="pH Icon"
-                                android:src="@drawable/ph"/>
+                                android:src="@drawable/ph" />
 
                             <LinearLayout
                                 android:layout_width="0dp"
@@ -173,42 +190,43 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/phLabel"
+                                    android:id="@+id/tdsLabel"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="pH:"
-                                    android:textColor="#000000"
+                                    android:text="TDS (ppm)"
+                                    android:textColor="@color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/phRange"
+                                    android:id="@+id/tdsRange"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Normal range: 6.5 - 8.0"
-                                    android:textColor="#999999"
+                                    android:text="Normal range: 150 - 500 ppm"
+                                    android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
 
                             <TextView
-                                android:id="@+id/phValue"
+                                android:id="@+id/tdsValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="7.8"
-                                android:textColor="#3F1C91"
+                                android:text="150 ppm"
+                                android:textColor="@color/light_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- Oxygen Card -->
+                    <!-- EC Card -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardBackgroundColor="@color/dark_purple"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="2dp"
-                        android:background="@drawable/card_background">
+                        app:cardElevation="2dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -221,7 +239,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:contentDescription="Oxygen Icon"
-                                android:src="@drawable/oxygen"/>
+                                android:src="@drawable/oxygen" />
 
                             <LinearLayout
                                 android:layout_width="0dp"
@@ -234,8 +252,8 @@
                                     android:id="@+id/oxygenLabel"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Dissolved Oxygen:"
-                                    android:textColor="#000000"
+                                    android:text="EC (µS/cm)"
+                                    android:textColor="@color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
 
@@ -243,19 +261,69 @@
                                     android:id="@+id/oxygenRange"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Normal range: 5.0 - 8.0 mg/L"
-                                    android:textColor="#999999"
+                                    android:text="Normal range: 400 – 1,200 µS/cm"
+                                    android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
 
                             <TextView
-                                android:id="@+id/oxygenValue"
+                                android:id="@+id/ecValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="6mg/L"
-                                android:textColor="#3F1C91"
+                                android:text="400 µS/cm"
+                                android:textColor="@color/light_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Comment Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardBackgroundColor="@color/dark_purple"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="pH Icon"
+                                android:src="@drawable/ph" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/commentLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Comment:"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/commentTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="This is a fish"
+                                    android:textColor="@color/light_purple"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -264,9 +332,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/dark_purple"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="2dp"
-                        android:background="@drawable/card_background">
+                        app:cardElevation="2dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -279,7 +347,7 @@
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:contentDescription="Status Icon"
-                                android:src="@drawable/status"/>
+                                android:src="@drawable/status" />
 
                             <LinearLayout
                                 android:layout_width="0dp"
@@ -293,7 +361,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Status:"
-                                    android:textColor="#000000"
+                                    android:textColor="@color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -303,7 +371,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Normal"
-                                android:textColor="#3F1C91"
+                                android:textColor="@color/light_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>

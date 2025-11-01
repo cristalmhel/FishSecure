@@ -52,7 +52,7 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> { navigateTo(HomeActivity::class.java); true }
-                R.id.nav_parameters -> { /* TODO */ true }
+                R.id.nav_aquarium -> { navigateTo(AquariumActivity::class.java); true }
                 R.id.nav_notifications -> { navigateTo(NotificationActivity::class.java); true }
                 R.id.nav_settings -> { navigateTo(SettingsActivity::class.java); true }
                 else -> false

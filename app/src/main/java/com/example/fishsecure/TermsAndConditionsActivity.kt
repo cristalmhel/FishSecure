@@ -32,8 +32,8 @@ class TermsAndConditionsActivity : AppCompatActivity() {
                     navigateTo(HomeActivity::class.java)
                     true
                 }
-                R.id.nav_parameters -> {
-                    // TODO: Replace with ParametersActivity when available
+                R.id.nav_aquarium -> {
+                    navigateTo(AquariumActivity::class.java)
                     true
                 }
                 R.id.nav_notifications -> {

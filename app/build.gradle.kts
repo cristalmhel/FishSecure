@@ -56,4 +56,5 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-database")
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

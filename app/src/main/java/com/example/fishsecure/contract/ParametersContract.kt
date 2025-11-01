@@ -4,8 +4,10 @@ interface ParametersContract {
 
     interface View {
         fun showTemperature(value: String, isValid: Boolean)
-        fun showPH(value: String, isValid: Boolean)
-        fun showOxygen(value: String, isValid: Boolean)
+        fun showTds(value: String, isValid: Boolean)
+        fun showEc(value: String, isValid: Boolean)
+        fun showComment(value: String)
+        fun showTitle(value: String)
         fun showStatus(value: String)
         fun showError(message: String)
     }
@@ -13,7 +15,7 @@ interface ParametersContract {
     interface Presenter {
         fun loadParameters(aquariumId: Int)
         fun validateTemperature(temp: Double): Boolean
-        fun validatePH(ph: Double): Boolean
-        fun validateOxygen(oxygen: Double): Boolean
+        fun validateTds(tds: Double): Boolean
+        fun validateEc(ec: Double): Boolean
     }
 }

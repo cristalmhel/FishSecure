@@ -61,8 +61,9 @@ class SettingsActivity : Activity(), SettingsContract.View {
                     finish()
                     true
                 }
-                R.id.nav_parameters -> {
-                    // TODO: Navigate to parameters activity when created
+                R.id.nav_aquarium -> {
+                    startActivity(Intent(this, AquariumActivity::class.java))
+                    finish()
                     true
                 }
                 R.id.nav_notifications -> {

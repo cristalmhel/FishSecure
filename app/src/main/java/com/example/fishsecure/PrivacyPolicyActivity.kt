@@ -32,9 +32,8 @@ class PrivacyPolicyActivity : AppCompatActivity() {
                     navigateTo(HomeActivity::class.java)
                     true
                 }
-                R.id.nav_parameters -> {
-                    // Replace with your ParametersActivity later
-                    // navigateTo(ParametersActivity::class.java)
+                R.id.nav_aquarium -> {
+                    navigateTo(AquariumActivity::class.java)
                     true
                 }
                 R.id.nav_notifications -> {

@@ -37,7 +37,7 @@ class ForgotPasswordPresenter(private val view: ForgotPasswordContract.View) :
                 } else {
                     // Email does not exist, safe to add new user
                     view.hideProgress()
-                    view.showError("Email already registered")
+                    view.showError("Email not found.")
                 }
             }
             .addOnFailureListener { e ->

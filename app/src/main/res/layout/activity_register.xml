@@ -38,7 +38,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="First Name"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="textPersonName" />
 
         <EditText
@@ -47,7 +49,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="Last Name"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="textPersonName" />
 
         <EditText
@@ -56,7 +60,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="Middle Name"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="textPersonName" />
 
         <EditText
@@ -65,7 +71,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="Username"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="text" />
 
         <EditText
@@ -74,7 +82,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="Email Address"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -82,7 +92,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:hint="Password"
             android:inputType="textPassword" />
 
@@ -92,7 +104,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="Confirm Password"
-            android:textStyle="bold"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:inputType="textPassword" />
 
 
@@ -104,7 +118,7 @@
             android:background="@drawable/blue_rounded_button"
             android:text="REGISTER"
             android:textAllCaps="true"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/white" />
 
 
         <TextView
@@ -114,6 +128,6 @@
             android:layout_marginTop="16dp"
             android:clickable="true"
             android:text="Already have an account? Login"
-            android:textColor="#000000" />
+            android:textColor="@color/black" />
     </LinearLayout>
 </ScrollView>
