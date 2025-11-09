@@ -1,11 +1,9 @@
 package com.example.fishsecure
 
 import android.app.Activity
-import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.widget.EditText
 import android.widget.TextView
 import com.example.fishsecure.contract.HomeContract
 import com.example.fishsecure.presenter.HomePresenter
@@ -40,19 +38,11 @@ class HomeActivity : Activity(), HomeContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-//        addNewBtn = findViewById(R.id.addNewBtn)
-//        recyclerView = findViewById(R.id.aquariumRecyclerView)
         bottomNavigation = findViewById(R.id.bottomNavigation)
         greetingText = findViewById(R.id.greetingText)
         dateText = findViewById(R.id.dateText)
 
         presenter = HomePresenter(this)
-
-//        adapter = AquariumAdapter(
-//            emptyList(),
-//            onDeleteClick = { id -> presenter.deleteAquarium(id) },
-//            onRenameClick = { id -> showRenameDialog(id) }
-//        )
 
         // Initialize chart views
         temperatureChart = findViewById(R.id.temperatureChart)
@@ -63,13 +53,6 @@ class HomeActivity : Activity(), HomeContract.View {
         setupChart(temperatureChart, getTemperatureData(), "Temperature Data", "#FF5722") // Example Color: Deep Orange
         setupChart(tdsChart, getTDSData(), "TDS Data", "#4CAF50") // Example Color: Green
         setupChart(ecChart, getECData(), "EC Data", "#2196F3") // Example Color: Blue
-
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//        recyclerView.adapter = adapter
-//
-//        addNewBtn.setOnClickListener {
-//            presenter.addAquarium()
-//        }
 
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -95,23 +78,6 @@ class HomeActivity : Activity(), HomeContract.View {
 
     override fun showAquariums(aquariums: List<com.example.fishsecure.model.Aquarium>) {
 //        adapter.updateData(aquariums)
-    }
-
-    private fun showRenameDialog(aquariumId: Int) {
-        val input = EditText(this)
-        input.hint = "Enter new name"
-
-        AlertDialog.Builder(this)
-            .setTitle("Rename Aquarium")
-            .setView(input)
-            .setPositiveButton("Save") { _, _ ->
-                val newName = input.text.toString().trim()
-                if (newName.isNotEmpty()) {
-                    presenter.renameAquarium(aquariumId, newName)
-                }
-            }
-            .setNegativeButton("Cancel", null)
-            .show()
     }
 
     // Helper

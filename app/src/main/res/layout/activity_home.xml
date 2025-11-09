@@ -90,42 +90,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-<!--            &lt;!&ndash; Add New &ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:id="@+id/addNewBtn"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="+ ADD NEW"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="14sp"-->
-<!--                android:textColor="#000000"-->
-<!--                android:layout_marginTop="12dp"-->
-<!--                android:padding="8dp"/>-->
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/aquariumRecyclerView"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginTop="10dp" />-->
-
-<!--            &lt;!&ndash; Aquarium Container &ndash;&gt;-->
-<!--            <LinearLayout-->
-<!--                android:id="@+id/aquariumContainer"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical"-->
-<!--                android:layout_marginTop="12dp" />-->
-
-<!--            &lt;!&ndash; Graph &ndash;&gt;-->
-<!--            <ImageView-->
-<!--                android:id="@+id/graphImage"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="150dp"-->
-<!--                android:layout_marginTop="12dp"-->
-<!--                android:contentDescription="Graph"-->
-<!--                android:scaleType="centerCrop"-->
-<!--                android:src="@drawable/chart" />-->
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
