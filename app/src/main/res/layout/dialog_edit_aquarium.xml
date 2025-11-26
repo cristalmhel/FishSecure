@@ -24,24 +24,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/status_dropdown_layout"
-            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@color/dark_purple"
-            android:hint="Status">
-
-            <AutoCompleteTextView
-                android:id="@+id/edit_status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:background="@color/dark_purple"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -68,6 +50,30 @@
                 android:inputType="textMultiLine"
                 android:minLines="2"
                 android:maxLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="14sp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/status_dropdown_layout"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/edit_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:background="@color/dark_purple"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>

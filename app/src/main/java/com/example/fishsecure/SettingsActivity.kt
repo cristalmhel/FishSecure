@@ -35,6 +35,7 @@ class SettingsActivity : Activity(), SettingsContract.View {
         presenter = SettingsPresenter(this)
 
         btnBack.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }
 
@@ -104,16 +105,19 @@ class SettingsActivity : Activity(), SettingsContract.View {
     override fun navigateToEditProfile() {
         val intent = Intent(this, EditProfileActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     override fun navigateToTermsAndConditions() {
         val intent = Intent(this, TermsAndConditionsActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     override fun navigateToPrivacyPolicy() {
         val intent = Intent(this, PrivacyPolicyActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
 }

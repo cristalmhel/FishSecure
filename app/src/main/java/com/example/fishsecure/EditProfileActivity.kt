@@ -15,6 +15,7 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
 
     private lateinit var presenter: EditProfileContract.Presenter
     private lateinit var firstNameField: EditText
+    private lateinit var middleNameField: EditText
     private lateinit var lastNameField: EditText
     private lateinit var emailField: EditText
     private lateinit var saveBtn: Button
@@ -26,6 +27,7 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
 
         // Init views
         firstNameField = findViewById(R.id.editFirstName)
+        middleNameField = findViewById(R.id.editMiddleName)
         lastNameField = findViewById(R.id.editLastName)
         emailField = findViewById(R.id.editEmail)
         saveBtn = findViewById(R.id.save_button)
@@ -39,6 +41,7 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
         saveBtn.setOnClickListener {
             presenter.onSaveClicked(
                 firstNameField.text.toString(),
+                middleNameField.text.toString(),
                 lastNameField.text.toString(),
                 emailField.text.toString()
             )
@@ -65,10 +68,15 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun fillUserData(firstName: String, lastName: String, email: String) {
+    override fun fillUserData(firstName: String, middleName: String, lastName: String, email: String) {
         firstNameField.setText(firstName)
+        middleNameField.setText(middleName)
         lastNameField.setText(lastName)
         emailField.setText(email)
+    }
+
+    override fun showError(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     override fun navigateBackToSettings() {
@@ -79,5 +87,6 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
     private fun navigateTo(destination: Class<*>) {
         val intent = Intent(this, destination)
         startActivity(intent)
+        finish()
     }
 }

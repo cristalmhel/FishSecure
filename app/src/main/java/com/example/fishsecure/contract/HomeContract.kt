@@ -4,12 +4,16 @@ import com.example.fishsecure.model.Aquarium
 
 interface HomeContract {
     interface View {
-        fun showAquariums(aquariums: List<Aquarium>)
+        fun showLoading()
+        fun hideLoading()
+        // Method to display the fetched sensor data and aquarium name
+        fun displayAquariumData(aquariumList: List<Aquarium>)
+        fun showErrorMessage(message: String)
     }
 
     interface Presenter {
-        fun addAquarium()
-        fun deleteAquarium(id: Int)
-        fun renameAquarium(id: Int, newName: String)
+        // Method for the View to request data based on the user's username
+        fun getAquariumDetails(username: String)
+        fun onDestroy() // For cleanup
     }
 }

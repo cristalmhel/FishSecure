@@ -27,17 +27,6 @@ class RegisterPresenter(private val view: RegisterContract.View) : RegisterContr
             view.showError("Passwords do not match")
             return
         }
-//        val database = Firebase.database("https://fish-69805-default-rtdb.asia-southeast1.firebasedatabase.app")
-//        val myRef = database.getReference("Users")
-//        val user = User(firstName, lastName, middleName, username, email, password)
-//        myRef.child(username)
-//            .setValue(user)
-//            .addOnSuccessListener {
-//                view.showSuccess("User Registered Successfully!")
-//            }
-//            .addOnFailureListener { error ->
-//                view.showError("Error:" + error.message)
-//            }
 
         val database = Firebase.database("https://fish-69805-default-rtdb.asia-southeast1.firebasedatabase.app")
         val usersRef = database.getReference("Users")

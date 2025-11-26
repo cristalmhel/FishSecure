@@ -143,7 +143,7 @@
                                     android:id="@+id/tempRange"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Normal range: 24°C - 28°C"
+                                    android:text="Normal range: 18 - 30"
                                     android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -202,7 +202,7 @@
                                     android:id="@+id/tdsRange"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Normal range: 150 - 500 ppm"
+                                    android:text="Normal range: 75 - 175"
                                     android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -252,7 +252,7 @@
                                     android:id="@+id/oxygenLabel"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="EC (µS/cm)"
+                                    android:text="EC (mS/cm)"
                                     android:textColor="@color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
@@ -261,7 +261,7 @@
                                     android:id="@+id/oxygenRange"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Normal range: 400 – 1,200 µS/cm"
+                                    android:text="Normal range: 0.15 – 0.35"
                                     android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -270,10 +270,59 @@
                                 android:id="@+id/ecValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="400 µS/cm"
+                                android:text="400 mS/cm"
                                 android:textColor="@color/light_purple"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Status Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/dark_purple"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="Status Icon"
+                                android:src="@drawable/status" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/statusLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Status:"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/statusValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Normal"
+                                    android:textColor="@color/light_purple"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -324,56 +373,6 @@
                                     android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Status Card -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        app:cardBackgroundColor="@color/dark_purple"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="2dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:contentDescription="Status Icon"
-                                android:src="@drawable/status" />
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/statusLabel"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Status:"
-                                    android:textColor="@color/white"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/statusValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Normal"
-                                android:textColor="@color/light_purple"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 

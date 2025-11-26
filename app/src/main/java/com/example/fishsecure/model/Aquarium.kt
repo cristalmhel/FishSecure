@@ -4,7 +4,7 @@ data class Aquarium(
     val id: Int? = null,
     var name: String =  "",
     var description: String = "",
-    var status: String = "Normal",
+    var status: String = "Active",
     var comment: String = "",
     var user: String = "",
     var ec: Float = 0f,

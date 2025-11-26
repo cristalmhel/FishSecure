@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/backg">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottomNavigation"
+        android:background="@drawable/backg"
         android:fillViewport="true">
 
         <LinearLayout
@@ -59,6 +59,19 @@
                 android:textColor="@color/primaryColor"
                 android:fontFamily="sans-serif-medium" />
 
+            <!-- Email -->
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_bg" />
+
             <!-- First Name -->
             <EditText
                 android:id="@+id/editFirstName"
@@ -66,7 +79,20 @@
                 android:layout_height="wrap_content"
                 android:hint="First Name"
                 android:textColorHint="@color/black"
-                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_bg" />
+
+            <!-- Middle Name -->
+            <EditText
+                android:id="@+id/editMiddleName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Middle Name"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
                 android:padding="12dp"
                 android:background="@drawable/edittext_bg" />
 
@@ -77,18 +103,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Last Name"
                 android:textColorHint="@color/black"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
-                android:background="@drawable/edittext_bg" />
-
-            <!-- Email -->
-            <EditText
-                android:id="@+id/editEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:layout_marginTop="12dp"
                 android:padding="12dp"
                 android:background="@drawable/edittext_bg" />

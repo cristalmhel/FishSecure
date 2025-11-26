@@ -100,7 +100,7 @@
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/temperatureChart"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="350dp"
                 android:layout_marginBottom="16dp"/>
 
             <TextView
@@ -113,7 +113,7 @@
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/tdsChart"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="350dp"
                 android:layout_marginBottom="16dp"/>
 
             <TextView
@@ -126,9 +126,23 @@
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/ecChart"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"/>
+                android:layout_height="350dp"
+                android:paddingBottom="20dp"/>
         </LinearLayout>
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Bottom Navigation Fixed -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
