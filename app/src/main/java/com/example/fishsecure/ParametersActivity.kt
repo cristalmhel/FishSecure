@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -15,6 +17,8 @@ class ParametersActivity : Activity(), ParametersContract.View {
 
     private lateinit var presenter: ParametersContract.Presenter
     private lateinit var bottomNavigation: BottomNavigationView
+    private val handler = Handler(Looper.getMainLooper())
+    private var aquariumId: Int = -1
 
     private lateinit var aquariumTitle: TextView
     private lateinit var tempValue: TextView
@@ -23,6 +27,14 @@ class ParametersActivity : Activity(), ParametersContract.View {
     private lateinit var commentTv: TextView
     private lateinit var statusValue: TextView
 
+    // Runnable that runs every 5 seconds
+    private val fetchTask = object : Runnable {
+        override fun run() {
+            presenter.loadParameters(aquariumId)
+            handler.postDelayed(this, 5000) // run again after 5 seconds
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parameters)
@@ -30,7 +42,7 @@ class ParametersActivity : Activity(), ParametersContract.View {
         presenter = ParametersPresenter(this)
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
-        val aquariumId = intent.getIntExtra("AQUARIUM_ID", -1)
+        aquariumId = intent.getIntExtra("AQUARIUM_ID", -1)
         aquariumTitle = findViewById(R.id.aquariumTitle)
         tempValue = findViewById(R.id.tempValue)
         bottomNavigation = findViewById(R.id.bottomNavigation)
@@ -39,7 +51,8 @@ class ParametersActivity : Activity(), ParametersContract.View {
         commentTv = findViewById(R.id.commentTv)
         statusValue = findViewById(R.id.statusValue)
 
-        presenter.loadParameters(aquariumId)
+        presenter.loadParameters(aquariumId)   // first fetch immediately
+        handler.postDelayed(fetchTask, 5000)   // start repeating fetch
 
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -55,6 +68,11 @@ class ParametersActivity : Activity(), ParametersContract.View {
             startActivity(Intent(this, AquariumActivity::class.java))
             finish()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        handler.removeCallbacks(fetchTask) // stop when Activity closes
     }
 
     override fun showTemperature(value: String, isValid: Boolean) {

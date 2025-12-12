@@ -12,10 +12,10 @@ class ParametersPresenter(private val view: ParametersContract.View) : Parameter
     private val database = Firebase.database("https://fish-69805-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("aquariums")
     private val tempMin = 18.0
     private val tempMax = 30.0
-    private val tdsMin = 75.0
-    private val tdsMax = 175.0
+    private val tdsMin = 100.0
+    private val tdsMax = 3200.0
     private val ecMin = 0.150
-    private val ecMax = 0.350
+    private val ecMax = 6.0
     override fun loadParameters(aquariumId: Int) {
         val singleAquariumRef = database.child(aquariumId.toString())
 

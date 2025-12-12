@@ -202,7 +202,7 @@
                                     android:id="@+id/tdsRange"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Normal range: 75 - 175"
+                                    android:text="Normal range: 100 - 3200"
                                     android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -261,7 +261,7 @@
                                     android:id="@+id/oxygenRange"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Normal range: 0.15 – 0.35"
+                                    android:text="Normal range: 0.15 – 6.0"
                                     android:textColor="@color/light_purple"
                                     android:textSize="12sp" />
                             </LinearLayout>

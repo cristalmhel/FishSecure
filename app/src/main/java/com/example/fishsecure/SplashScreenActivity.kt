@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import com.example.fishsecure.service.AquariumMonitorService
 
 class SplashScreenActivity : Activity() {
     private lateinit var getStartedButton: Button
@@ -11,6 +12,8 @@ class SplashScreenActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+
+        startService(Intent(this, AquariumMonitorService::class.java))
 
         getStartedButton = findViewById(R.id.btnGetStarted)
 

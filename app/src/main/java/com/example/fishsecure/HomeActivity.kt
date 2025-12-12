@@ -145,7 +145,7 @@ class HomeActivity : Activity(), HomeContract.View {
         // The setupChart method must be able to handle this list of entries now.
         setupChart(temperatureChart, tempEntries, "Temperature (°C)", "#FF5722", dynamicXLabels)
         setupChart(tdsChart, tdsEntries, "TDS (ppm)", "#4CAF50", dynamicXLabels)
-        setupChart(ecChart, ecEntries, "EC (µS/cm)", "#2196F3", dynamicXLabels)
+        setupChart(ecChart, ecEntries, "EC (mS/cm)", "#2196F3", dynamicXLabels)
     }
 
     override fun showErrorMessage(message: String) {
